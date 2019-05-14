@@ -13,8 +13,7 @@ const express = require('express'),
 	fs = require('fs'),
 	// extracts data from request stream and exposes it on req.body
 	bodyParser = require('body-parser'),
-	// Enables hashing of passwords
-	passwordHash = require('password-hash'),
+
 	// Accesses Postgres server
 	pg = require('pg'),
 
