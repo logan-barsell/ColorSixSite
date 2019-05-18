@@ -1,5 +1,7 @@
 $(document).ready( f => {
 
+	   $('.modal').modal()
+
 	var windowTop = $(window).scrollTop()
 	var coverPage = $('#coverPage').offset().top
 	var navPage = $('#navPage').offset().top
@@ -72,7 +74,7 @@ $(document).ready( f => {
 	$('#videos').hide()
 	$('#aboutus').hide()
 
-	$('li.collection-item').click( f => {
+	$('#navPage li.collection-item').click( f => {
 		$('#navPage').animate({width: 'toggle'},500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
 		$('#navBottom').animate({width: 'toggle'}, 500, f => {
@@ -92,7 +94,7 @@ $(document).ready( f => {
 		$('#videos').slideDown(1500)
 	})
 	$('#link2aboutus').click( f => {
-		$('#aboutus').slideDown(1500)
+		$('#aboutus').slideDown(2700)
 	})
 
 	$('#back2menu').click( f => {
@@ -102,7 +104,7 @@ $(document).ready( f => {
 		$('#mainNav').animate({width: 'toggle'}, 500)
 		$('#navBottom').css('opacity','.9')
 		$('#navBottom').animate({width: 'toggle'}, 500)
-		$('html, body').animate({scrollTop:$(document).height()}, 'fast');
+		$('html, body').animate({scrollTop:$(document).height()}, 'fast')
 	})
 
 	var windoww = $(window).width()
@@ -117,10 +119,13 @@ $(document).ready( f => {
 		}
 
 		if (windoww < 371) {
+			$('.collection .collection-item.avatar ').css('font-size','24px')
 			$('#mainNav .brand-logo img').css('max-width','176px')
 		} else {
+			$('.collection .collection-item.avatar ').css('font-size','31px')
 			$('#mainNav .brand-logo img').css('max-width','227px')
 		}
+
 	}
 
 
@@ -136,34 +141,132 @@ $(document).ready( f => {
 
 	})
 
-	Amplitude.init({
-		"songs": [
-			{
-				"name": "Song Name 1",
-				"artist": "Artist Name",
-				"album": "Album Name",
-				"url": "/song/url.mp3",
-				"cover_art_url": "/cover/art/url.jpg"
-			},
-			{
-				"name": "Song Name 2",
-				"artist": "Artist Name",
-				"album": "Album Name",
-				"url": "/song/url.mp3",
-				"cover_art_url": "/cover/art/url.jpg"
-			},
-			{
-				"name": "Song Name 3",
-				"artist": "Artist Name",
-				"album": "Album Name",
-				"url": "/song/url.mp3",
-				"cover_art_url": "/cover/art/url.jpg"
-			}
-		]
-	})
-
-
-
+    var supportsAudio = !!document.createElement('audio').canPlayType
+    if (supportsAudio) {
+        // initialize plyr
+        var player = new Plyr('#audio1', {
+            controls: [
+                'restart',
+                'play',
+                'progress',
+                'current-time',
+                'duration',
+                'mute',
+                'volume'
+            ]
+        })
+        // initialize playlist and controls
+        var index = 0,
+            playing = false,
+            mediaPath = 'https://archive.org/download/mythium/',
+            extension = '',
+            tracks = [{
+                "track": 1,
+                "name": "Dirty Little Secret",
+                "duration": "3:14",
+                "file": "JLS_ATI"
+            }, {
+                "track": 2,
+                "name": "Goodbye, Goodbye",
+                "duration": "3:18",
+                "file": "BS_TF"
+            }, {
+                "track": 3,
+                "name": "Sweet Hole In My Head",
+                "duration": "4:32",
+                "file": "BS_ATKM"
+            }, {
+                "track": 4,
+                "name": "The Bends",
+                "duration": "2:51",
+                "file": "BSFM_TF"
+            }],
+            buildPlaylist = $(tracks).each(function(key, value) {
+                var trackNumber = value.track,
+                    trackName = value.name,
+                    trackDuration = value.duration
+                if (trackNumber.toString().length === 1) {
+                    trackNumber = '0' + trackNumber
+                }
+                $('#plList').append('<li> \
+                    <div class="plItem"> \
+                        <span class="plTitle">' + trackName + '</span> \
+                        <span class="plLength">' + trackDuration + '</span> \
+                    </div> \
+                </li>')
+            }),
+            trackCount = tracks.length,
+            npAction = $('#npAction'),
+            npTitle = $('#npTitle'),
+            audio = $('#audio1').on('play', function () {
+                playing = true
+                npAction.text('Now Playing...')
+            }).on('pause', function () {
+                playing = false
+                npAction.text('Paused...')
+            }).on('ended', function () {
+                npAction.text('Paused...')
+                if ((index + 1) < trackCount) {
+                    index++
+                    loadTrack(index)
+                    audio.play()
+                } else {
+                    audio.pause()
+                    index = 0
+                    loadTrack(index)
+                }
+            }).get(0),
+            btnPrev = $('#btnPrev').on('click', function () {
+                if ((index - 1) > -1) {
+                    index--
+                    loadTrack(index)
+                    if (playing) {
+                        audio.play()
+                    }
+                } else {
+                    audio.pause()
+                    index = 0
+                    loadTrack(index)
+                }
+            }),
+            btnNext = $('#btnNext').on('click', function () {
+                if ((index + 1) < trackCount) {
+                    index++
+                    loadTrack(index)
+                    if (playing) {
+                        audio.play()
+                    }
+                } else {
+                    audio.pause()
+                    index = 0
+                    loadTrack(index)
+                }
+            }),
+            li = $('#plList li').on('click', function () {
+                var id = parseInt($(this).index())
+                if (id !== index) {
+                    playTrack(id)
+                }
+            }),
+            loadTrack = function (id) {
+                $('.plSel').removeClass('plSel')
+                $('#plList li:eq(' + id + ')').addClass('plSel')
+                npTitle.text(tracks[id].name)
+                index = id
+                audio.src = mediaPath + tracks[id].file + extension
+            },
+            playTrack = function (id) {
+                loadTrack(id)
+                audio.play()
+            }
+        extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : ''
+        loadTrack(index)
+    } else {
+        // boo hoo
+        $('.column').addClass('hidden')
+        var noSupport = $('#audio1').text()
+        $('.container').append('<p class="no-support">' + noSupport + '</p>')
+    }
 
 })
 

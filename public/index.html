@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/css/plyr.css" />
   </head>
   <body>
 
@@ -43,15 +44,56 @@
       </div>
     </nav>
 
-    <div id="events" class="page"></div>
+    <div id="events" class="page">
+      <ul class="collection">
+        <h6>Upcoming Shows</h6>
+        <hr>
+        <li class="collection-item avatar">
+          <span class="title">June 9th</span>
+          <p>DNA Lounge</p>
+          <a href="#moreInfo" class="btn waves-effect waves-light secondary-content moreInfo modal-trigger">More Info</a>
+          <div id="moreInfo" class="modal">
+            <div class="modal-content">
+              <img src="../static/css/images/showad1.jpg">
+            </div>
+          </div>
+          <a href="#!" class="waves-effect waves-light btn secondary-content buyTix">Buy Tickets</a>
+        </li>
+      </ul>
+    </div>
 
-    <div id="music" class="page"></div>
+    <div id="music" class="page">
+      <div class="container">
+          <div class="column add-bottom">
+              <div id="mainwrap">
+                  <h6>Debut EP "<span>Aurora</span>" - Coming Soon</h6>
+                  <div class="img-container">
+                    <img class="center" src="../static/css/images/aurora.jpg">
+                  </div>
+                  <div id="nowPlay" class="center">
+                    <span id="npTitle"></span>
+                  </div>
+                  <div id="audiowrap">
+                      <div id="audio0">
+                          <audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                      </div>
+                     
+                  </div>
+                  <div id="plwrap">
+                      <ul id="plList"></ul>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+
+    </div>
+
+    </div>
 
     <div id="videos" class="page">
 
-
       <div class="row">
-
         <div class="col s12 m6 l4">
           <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/lG5sq4fvg_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -76,21 +118,59 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/FY7IaRFuYLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-
       </div>
-
-
 
     </div>
 
     <div id="aboutus" class="page">
       
-      <div class="container center"><img id="logo" src="../static/css/images/color6_1.JPG"><p class="flow-text center-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+      <div class="container center"><img id="logo" src="../static/css/images/color6_1.JPG"><p class="flow-text center-align">The Color Six is a San Francisco based rock band that began in 2017 as a solo project of founding member <a target="_blank" href="https://www.instagram.com/dez_monroe/">Dez Monroe</a>. As of 2019, the lineup now includes bassist and singer <a target="_blank" href="https://www.instagram.com/vginnyg/">Adeline Jayne</a>, and drummer <a target="_blank" href="https://www.instagram.com/jimmy.brents/?hl=en">Jimmy Brents</a>.</p></div>
+
+      <div class="row">
+
+        <div class="col s12 m3 l3">
+          <img src="../static/css/images/tc6_31.jpg">
+          <img src="../static/css/images/tc6_2.jpg">
+          <img src="../static/css/images/tc6_1.jpg">
+          <img src="../static/css/images/tc6_3.jpg">
+          <img src="../static/css/images/tc6_30.jpg">
+          <img src="../static/css/images/tc6_7.jpg">
+          <img src="../static/css/images/tc6_17.jpg">
+          <img src="../static/css/images/tc6_27.jpg">
+        </div>
+
+        <div class="col s12 m3 l3">
+          <img src="../static/css/images/tc6_19.jpg">
+          <img src="../static/css/images/tc6_13.jpg">
+          <img src="../static/css/images/tc6_12.jpg">
+          <img src="../static/css/images/tc6_14.jpg">
+          <img src="../static/css/images/tc6_18.jpg">
+          <img src="../static/css/images/tc6_16.jpg">
+        </div>
+
+        <div class="col s12 m3 l3">
+          <img src="../static/css/images/tc6_10.jpg">
+          <img src="../static/css/images/tc6_38.jpg">
+          <img src="../static/css/images/tc6_20.jpg">
+          <img src="../static/css/images/tc6_21.jpg">
+          <img src="../static/css/images/tc6_23.jpg">
+          <img src="../static/css/images/tc6_24.jpg">
+          <img src="../static/css/images/tc6_25.jpg">
+        </div>
+
+        <div class="col s12 m3 l3">
+          <img src="../static/css/images/tc6_15.jpg">
+          <img src="../static/css/images/tc6_29.jpg">
+          <img src="../static/css/images/tc6_4.jpg">
+          <img src="../static/css/images/tc6_33.jpg">
+          <img src="../static/css/images/tc6_35.jpg">
+          <img src="../static/css/images/tc6_37.jpg">
+          <img src="../static/css/images/tc6_6.jpg">
+          <img src="../static/css/images/tc6_5.jpg">
+          <img src="../static/css/images/tc6_9.jpg">
+        </div>
+
+      </div>
 
     </div>
 
@@ -114,5 +194,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../static/js/custom.js"></script>
+    <script src="../static/js/plyr.min.js"></script>
+
   </body>
 </html>

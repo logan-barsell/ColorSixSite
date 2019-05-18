@@ -151,19 +151,19 @@ nav {
 }
 
 
-.collection .collection-item {
+#navPage .collection .collection-item {
 	margin: 13px;
 	cursor: pointer; 
 	opacity: .7;
 }
 
-.collection:hover {
+#navPage .collection:hover {
 	text-shadow: 0 0 5px rgba(0,0,0,0.5);
 	color: transparent;
 }
 
 
-.collection li.collection-item:hover {
+#navPage .collection li.collection-item:hover {
 	opacity: .9;
 	color: black;
 	text-shadow: none;
@@ -232,6 +232,49 @@ nav {
 	z-index: 1;
 }
 
+#events h6 {
+	text-align: center;
+
+}
+
+#events .collection {
+	margin: auto;
+	padding-top: 127px;
+	border: none;
+	color: white;
+	width: 88%;
+}
+
+#events .collection-item {
+	background-color: transparent;
+}
+
+.collection .collection-item.avatar {
+	padding-left: 0px;
+}
+
+.modal img {
+	max-width: 100%;
+}
+
+.collection .collection-item.avatar .title {
+	font-size: 31px;
+}
+
+.collection .collection-item.avatar .secondary-content.buyTix {
+	top: 60px;
+	background-color: #ae1b2a;
+	color: white;
+	text-shadow: .5px .5px #d2af59;
+}
+
+
+
+.collection .collection-item.avatar .secondary-content.moreInfo {
+	top: 15px;
+	background-color: black;
+}
+
 #videos .row {
 	padding-top: 127px;
 	margin-bottom: 0px;
@@ -251,6 +294,150 @@ nav {
 	font-size: 31px;
 	color: white;
 }
+
+#aboutus a {
+	color: white;
+	text-shadow: 1px 1px 0px #ae1b2a;
+	font-weight: bold;
+}
+
+
+#aboutus .col {
+	padding: 0px;
+	line-height: 0px;
+
+}
+
+#aboutus .row {
+	margin-top: 55px;
+	margin-bottom: 0px;
+}
+
+#aboutus .col img {
+	width: 100%
+}
+
+
+/* Global Styles
+================================================== */
+
+
+/* Setup
+================================================== */
+
+#music .container { 
+	position:relative;
+	padding-top:111px;
+	max-width:800px;
+	width:100%; 
+}
+
+#music h6 {
+	text-align: center;
+	text-shadow: 2px 2px black;
+	color: white;
+	margin-top: 0px;
+}
+
+#music h6 span {
+	color: #2c72a9;
+	text-shadow: 1px 1px #d2af59;
+	font-size: 44px;
+}
+
+#music .img-container {
+	max-width: 444px;
+	margin: auto;
+}
+
+#music .img-container img {
+	width: 100%;
+}
+
+
+#music .column { width:inherit; }
+
+
+/* Misc.
+================================================== */
+
+.no-support {
+margin:2rem auto;
+text-align:center;
+width:90%;
+}
+
+
+/* Audio Player Styles
+================================================== */
+
+
+
+
+
+
+#plList li {
+cursor:pointer;
+display:block;
+margin:0;
+padding:21px 0;
+}
+
+#plList li:hover {
+background-color:black;
+opacity: .4;
+}
+
+.plItem {
+position:relative;
+}
+
+.plTitle {
+color: white;
+padding-left: 13px;
+}
+
+
+.plLength {
+padding-left:21px;
+position:absolute;
+right:21px;
+top:0;
+color: white;
+}
+
+.plSel,
+.plSel:hover {
+background-color:black;
+color: black;
+opacity: .7;
+}
+
+/* Plyr Overrides
+================================================== */
+
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr--audio .plyr__controls button:hover,
+.plyr__play-large {
+background: black;
+}
+
+.plyr--full-ui input[type=range] {
+	color: red;
+}
+
+#nowPlay {
+	margin-bottom: 7px;
+	color: white;
+	text-shadow: 2px 2px 0px black;
+}
+
+#music button {
+	background: black;
+}
+
+/* Media Queries
+================================================== */
 
 
 
