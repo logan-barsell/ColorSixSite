@@ -96,7 +96,7 @@ nav ul a {
 	}
 }
 
-@media only screen and (max-width: 503px) {
+@media only screen and (max-width: 461px) {
 	nav ul a {
 		font-size: 21px;
 	}
@@ -232,47 +232,8 @@ nav {
 	z-index: 1;
 }
 
-#events h6 {
-	text-align: center;
-
-}
-
-#events .collection {
-	margin: auto;
+#songkick-cont {
 	padding-top: 127px;
-	border: none;
-	color: white;
-	width: 88%;
-}
-
-#events .collection-item {
-	background-color: transparent;
-}
-
-.collection .collection-item.avatar {
-	padding-left: 0px;
-}
-
-.modal img {
-	max-width: 100%;
-}
-
-.collection .collection-item.avatar .title {
-	font-size: 31px;
-}
-
-.collection .collection-item.avatar .secondary-content.buyTix {
-	top: 60px;
-	background-color: #ae1b2a;
-	color: white;
-	text-shadow: .5px .5px #d2af59;
-}
-
-
-
-.collection .collection-item.avatar .secondary-content.moreInfo {
-	top: 15px;
-	background-color: black;
 }
 
 #videos .row {
@@ -284,10 +245,24 @@ nav {
 	margin-bottom: 46px;
 }
 
+#aboutus .img-container {
+	max-width: 444px;
+	margin: auto;
+}
+
 #aboutus #logo {
 	margin-top: 133px;
-	width: 300px;
+	width: 100%;
 	border: 1px solid black;
+}
+#aboutus span {
+	text-shadow: 1px 1px #ab772b;
+	font-weight: bolder;
+	font-size: 35px;
+}
+
+#aboutus span span {
+	color: #ae1b2a;
 }
 
 #aboutus p {
@@ -327,9 +302,13 @@ nav {
 
 #music .container { 
 	position:relative;
-	padding-top:111px;
+	padding-top:49px;
 	max-width:800px;
 	width:100%; 
+}
+
+#music .column {
+	margin-top: 70px;
 }
 
 #music h6 {
@@ -355,7 +334,9 @@ nav {
 }
 
 
-#music .column { width:inherit; }
+#music .column { 
+	width:inherit;
+}
 
 
 /* Misc.
@@ -373,17 +354,19 @@ width:90%;
 
 
 
+#mainwrap, #mainwrap2 {
+	margin: 0px 6px;
+}
 
 
-
-#plList li {
+#plList li, #plList2 li {
 cursor:pointer;
 display:block;
 margin:0;
 padding:21px 0;
 }
 
-#plList li:hover {
+#plList li:hover, #plList2 li:hover {
 background-color:black;
 opacity: .4;
 }
@@ -406,8 +389,22 @@ top:0;
 color: white;
 }
 
+@media only screen and (max-width: 413px) {
+	.plLength {
+		display: none;
+	}
+	.plTitle {
+		padding-left: 0px;
+	}
+	.plItem {
+		text-align: center;
+	}
+}
+
+
+
 .plSel,
-.plSel:hover {
+.plSel:hover, .plSel2, .plSel2:hover {
 background-color:black;
 color: black;
 opacity: .7;
@@ -426,7 +423,7 @@ background: black;
 	color: red;
 }
 
-#nowPlay {
+#nowPlay, #nowPlay2 {
 	margin-bottom: 7px;
 	color: white;
 	text-shadow: 2px 2px 0px black;

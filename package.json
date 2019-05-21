@@ -1,0 +1,26 @@
+{
+  "name": "colorsixsite",
+  "version": "1.0.0",
+  "description": "The Color Six Band Website",
+  "main": "app.js",
+  "dependencies": {
+    "amplitudejs": "^4.1.0",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "pg": "^7.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lojoba64/ColorSixSite.git"
+  },
+  "author": "logan barsell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lojoba64/ColorSixSite/issues"
+  },
+  "homepage": "https://github.com/lojoba64/ColorSixSite#readme"
+}

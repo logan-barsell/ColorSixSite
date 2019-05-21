@@ -37,7 +37,7 @@
 
     <nav id="mainNav" >
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center"><img src="../static/css/images/color6_2.JPG"></a>
+        <a href="." class="brand-logo center"><img src="../static/css/images/color6_2.JPG"></a>
         <ul id="nav-mobile" class="left">
           <li><a id="back2menu" class="waves-effect waves-light btn gradient-border" href="#!"><img src="../static/css/images/menu.png"></a></li>
         </ul>
@@ -45,25 +45,16 @@
     </nav>
 
     <div id="events" class="page">
-      <ul class="collection">
-        <h6>Upcoming Shows</h6>
-        <hr>
-        <li class="collection-item avatar">
-          <span class="title">June 9th</span>
-          <p>DNA Lounge</p>
-          <a href="#moreInfo" class="btn waves-effect waves-light secondary-content moreInfo modal-trigger">More Info</a>
-          <div id="moreInfo" class="modal">
-            <div class="modal-content">
-              <img src="../static/css/images/showad1.jpg">
-            </div>
-          </div>
-          <a href="#!" class="waves-effect waves-light btn secondary-content buyTix">Buy Tickets</a>
-        </li>
-      </ul>
+
+      <div id="songkick-cont">
+        <a href="https://www.songkick.com/artists/10009834" class="songkick-widget" data-theme="dark">TC6 Show Dates</a>
+      </div>
+
     </div>
 
     <div id="music" class="page">
       <div class="container">
+
           <div class="column add-bottom">
               <div id="mainwrap">
                   <h6>Debut EP "<span>Aurora</span>" - Coming Soon</h6>
@@ -81,6 +72,27 @@
                   </div>
                   <div id="plwrap">
                       <ul id="plList"></ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="column add-bottom">
+              <div id="mainwrap2">
+                  <h6>Singles</h6>
+                  <div class="img-container">
+                    <img class="center" src="../static/css/images/color6_1.JPG">
+                  </div>
+                  <div id="nowPlay2" class="center">
+                    <span id="npTitle2"></span>
+                  </div>
+                  <div id="audiowrap2">
+                      <div id="audio2">
+                          <audio id="audio3" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                      </div>
+                     
+                  </div>
+                  <div id="plwrap2">
+                      <ul id="plList2"></ul>
                   </div>
               </div>
           </div>
@@ -124,7 +136,11 @@
 
     <div id="aboutus" class="page">
       
-      <div class="container center"><img id="logo" src="../static/css/images/color6_1.JPG"><p class="flow-text center-align">The Color Six is a San Francisco based rock band that began in 2017 as a solo project of founding member <a target="_blank" href="https://www.instagram.com/dez_monroe/">Dez Monroe</a>. As of 2019, the lineup now includes bassist and singer <a target="_blank" href="https://www.instagram.com/vginnyg/">Adeline Jayne</a>, and drummer <a target="_blank" href="https://www.instagram.com/jimmy.brents/?hl=en">Jimmy Brents</a>.</p></div>
+      <div class="container center">
+        <div class="img-container">
+          <img id="logo" src="../static/css/images/tc6_39.jpg">
+        </div>
+        <p class="flow-text center-align"><span>The <span>Color</span> Six</span>  is a San Francisco based rock band that began in 2017 as a solo project of founding member <a target="_blank" href="https://www.instagram.com/dez_monroe/">Dez Monroe</a>. As of 2019, the lineup now includes bassist and singer <a target="_blank" href="https://www.instagram.com/vginnyg/">Adeline Jayne</a>, and drummer <a target="_blank" href="https://www.instagram.com/jimmy.brents/?hl=en">Jimmy Brents</a>.</p></div>
 
       <div class="row">
 
@@ -177,10 +193,10 @@
     <nav id="navBottom">
       <div class="nav-wrapper">
         <ul class="left">
-          <li><a href="">contact@thecolorsix.com</a></li>
+          <li><a href="mailto:contact@thecolorsix.com">contact@thecolorsix.com</a></li>
         </ul>
         <ul class="right">
-          <li><a href="">925-915-9426</a></li>
+          <li><a href="tel:+925-915-9426">925-915-9426</a></li>
         </ul>
       </div>
     </nav>
@@ -195,6 +211,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../static/js/custom.js"></script>
     <script src="../static/js/plyr.min.js"></script>
-
+    <script src="//widget.songkick.com/10009834/widget.js"></script>
   </body>
 </html>
