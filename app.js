@@ -50,4 +50,4 @@ const express = require('express'),
 	})
 
 
-http.createServer(app).listen(8080, 'localhost')
+http.createServer(app).listen(80, 'localhost')
