@@ -16,6 +16,8 @@ $(document).ready( f => {
 	var mainNav = $('#mainNav')
 	bottomNav.hide()
 
+    var toggle = false 
+
 	$(window).scroll( f => {
 
 		var coverPage = $('#coverPage').offset().top
@@ -26,17 +28,22 @@ $(document).ready( f => {
 		var videosPage = $('#videos').offset().top
 		var aboutusPage = $('#aboutus').offset().top
 
+        console.log(windowTop)
 
-		if (windowTop > coverPage && $('#coverPage').is(':visible')) {
-			$('#coverPage').slideUp('slow', 'swing')
+ 
+
+		if (windowTop > 413 && $('#coverPage').is(':visible') && toggle == false && toggle2 == false)  {
+            console.log(toggle)
 			topNav.slideUp('slow', 'swing')
 			bottomNav.slideDown('slow', 'swing')
+            toggle = true
 		}
 
-		if (windowTop == navPage - 1 && $('#navPage').is(':visible')) {
-			$('#coverPage').slideDown('slow', 'swing')
+		if (windowTop < 413  && $('#coverPage').is(':visible') && toggle == true)  {
+            console.log(toggle) 
 			topNav.slideDown('slow', 'swing')
 			bottomNav.slideUp('slow', 'swing')
+            toggle = false
 		}
 
 	})
@@ -47,10 +54,14 @@ $(document).ready( f => {
 	$('#videos').hide()
 	$('#aboutus').hide()
 
+    var toggle2 = false
+
 	$('#navPage li.collection-item').click( f => {
+        $('#coverPage').hide()
 		$('#navPage').animate({width: 'toggle'},500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
 		$('#navBottom').animate({width: 'toggle'}, 500)
+        toggle2 = true
 	})
 
 	$('#link2events').click( f => {
@@ -71,10 +82,13 @@ $(document).ready( f => {
 	$('#back2menu').click( f => {
 		mainNav.css({'margin-top':'none','top':'0'})
 		$('.page').hide()
+        $('#coverPage').delay(100).fadeIn(888)
 		$('#navPage').animate({width: 'toggle'}, 500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
-		$('#navBottom').animate({width: 'toggle'}, 500)
+        $('#navBottom').animate({width: 'toggle'}, 500)
 		$('html, body').animate({scrollTop:$(document).height()}, 'fast')
+        toggle = false
+        toggle2 = false
 	})
 
 	var windoww = $(window).width()
