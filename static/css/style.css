@@ -48,7 +48,6 @@ body, html {
 }
 
 #coverPage {
-	height: 100%;
 	max-width: 100%;
 	background-color: #181818;
 	background-image: url("images/color6_4.JPG");
@@ -57,7 +56,7 @@ body, html {
 	background-size: cover;
 	box-shadow: 0px 0px 500px #3e1b47;
 	margin: auto;
-	margin-bottom: 646px;
+
 	border: 7px solid black;
 	position: relative;
 	z-index: 100;
@@ -130,17 +129,12 @@ nav {
 
 
 #coverPage {
-	overflow-y: scroll;
+	height: 50%;
 }
 
-#slideCont {
-overflow-y: scroll;
+#slide-cont {
+  height: 200%;
 }
-
-body {
-overflow-y: scroll;
-}
-
 
 
 
@@ -229,10 +223,6 @@ overflow-y: scroll;
 #mainNav .brand-logo {
 	position: absolute;
 	z-index: 100;
-}
-
-#slide-cont {
-	height: 100%;
 }
 
 #mainNav .brand-logo img {
