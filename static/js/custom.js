@@ -3,6 +3,9 @@ $(document).ready( f => {
 
 	$('.modal').modal()
 
+    
+
+    
 	var windowTop = $(window).scrollTop()
 	var coverPage = $('#coverPage').offset().top
 	var navPage = $('#navPage').offset().top
@@ -15,6 +18,7 @@ $(document).ready( f => {
 	var bottomNav = $('#navBottom')
 	var mainNav = $('#mainNav')
 	bottomNav.hide()
+
 
     var toggle = false 
 
@@ -54,9 +58,11 @@ $(document).ready( f => {
 	$('#videos').hide()
 	$('#aboutus').hide()
 
+
     var toggle2 = false
 
 	$('#navPage li.collection-item').click( f => {
+        $('#slide-cont').hide()
         $('#coverPage').hide()
 		$('#navPage').animate({width: 'toggle'},500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
@@ -65,23 +71,24 @@ $(document).ready( f => {
 	})
 
 	$('#link2events').click( f => {
-		$('#events').slideDown(1500)
+		$('#events').slideDown(1000)
 	})
 
 	$('#link2music').click( f => {
-		$('#music').slideDown(2500)
+		$('#music').slideDown(2000)
 	})
 
 	$('#link2videos').click( f => {
 		$('#videos').slideDown(1500)
 	})
 	$('#link2aboutus').click( f => {
-		$('#aboutus').slideDown(3500)
+		$('#aboutus').slideDown(3000)
 	})
 
 	$('#back2menu').click( f => {
 		mainNav.css({'margin-top':'none','top':'0'})
 		$('.page').hide()
+        $('#slide-cont').delay(100).fadeIn(888)
         $('#coverPage').delay(100).fadeIn(888)
 		$('#navPage').animate({width: 'toggle'}, 500)
 		$('#mainNav').animate({width: 'toggle'}, 500)

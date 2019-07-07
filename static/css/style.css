@@ -221,6 +221,10 @@ nav {
 	z-index: 100;
 }
 
+#slide-cont {
+	height: 100%;
+}
+
 #mainNav .brand-logo img {
 	max-width: 227px;
 	height: 96px;
