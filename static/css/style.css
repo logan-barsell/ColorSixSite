@@ -129,7 +129,17 @@ nav {
 }
 
 
+#coverPage {
+	overflow-y: scroll;
+}
 
+#slideCont {
+overflow-y: scroll;
+}
+
+body {
+overflow-y: scroll;
+}
 
 
 
