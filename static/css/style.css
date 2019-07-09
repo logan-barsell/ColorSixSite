@@ -157,8 +157,8 @@ nav {
 	background-image: url("images/color6_3.JPG");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
 	position: fixed;
+	background-size: cover;
 	top: 0;
 	width: 100%;
 }
