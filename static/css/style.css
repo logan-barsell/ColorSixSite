@@ -10,7 +10,7 @@ body, html {
 
 #navTop {
 	position: absolute;
-	z-index: 101;
+	z-index: 102;
 	top: 0;
 	box-shadow: 0px 0px 500px #3e1b47;
 	height: 100px;
@@ -37,7 +37,7 @@ body, html {
 }
 
 @media only screen and (max-width: 503px) {
-  #coverPage {
+  #coverPage img{
     box-shadow: none;
     border-top: none;
     border-bottom: none;
@@ -50,17 +50,21 @@ body, html {
 #coverPage {
 	max-width: 100%;
 	background-color: #181818;
-	background-image: url("images/color6_4.JPG");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: 0px 0px 500px #3e1b47;
 	margin: auto;
-
-	border: 7px solid black;
+	border-bottom: 27px solid black;
 	position: relative;
-	z-index: 100;
+	z-index: 101;
 
+}
+
+#coverPage img {
+	max-width: 100%;
+	border: 7px solid black;
+	box-shadow: 0px 0px 500px #3e1b47;
+	height: 100%;
 }
 
 #navPage .collection {
@@ -71,9 +75,9 @@ body, html {
 
 
 @media (max-height: 1000px) {
-	#coverPage {
+/*	#coverPage img {
 		max-width: 500px;
-	}
+	}*/
 	#navTop {
 		height: 64px
 	}
@@ -225,7 +229,7 @@ nav {
 	position: fixed;
 	top: 0;
 	opacity: 1;
-	z-index: 102;
+	z-index: 103;
 }
 
 #mainNav .brand-logo {

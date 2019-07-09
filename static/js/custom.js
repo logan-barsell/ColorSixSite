@@ -70,7 +70,7 @@ $(document).ready( f => {
         // toggle2 = true
 
         // if ($('#navTop').is(':visible')) {
-            $('#navTop').animate({width: 'toggle'}, 500)
+            $('#navTop').hide()
         // }
 	})
 
