@@ -43,7 +43,7 @@ $(document).ready( f => {
             toggle = true
 		}
 
-		if (windowTop < 413  && $('#coverPage').is(':visible') && toggle == true)  {
+		if (windowTop < 413  && $('#coverPage').is(':visible') && toggle == true && toggle2 == false)  {
             console.log(toggle) 
 			topNav.slideDown('slow', 'swing')
 			bottomNav.slideUp('slow', 'swing')
@@ -68,6 +68,10 @@ $(document).ready( f => {
 		$('#mainNav').animate({width: 'toggle'}, 500)
 		$('#navBottom').animate({width: 'toggle'}, 500)
         toggle2 = true
+
+        if ($('#navTop').is(':visible')) {
+            $('#navTop').animate({width: 'toggle'}, 500)
+        }
 	})
 
 	$('#link2events').click( f => {
