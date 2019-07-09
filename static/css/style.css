@@ -9,7 +9,7 @@ body, html {
 }
 
 #navTop {
-	position: fixed;
+	position: absolute;
 	z-index: 101;
 	top: 0;
 	box-shadow: 0px 0px 500px #3e1b47;

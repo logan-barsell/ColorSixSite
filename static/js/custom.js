@@ -62,8 +62,8 @@ $(document).ready( f => {
     // var toggle2 = false
 
 	$('#navPage li.collection-item').click( f => {
-        // $('#slide-cont').hide()
-        // $('#coverPage').hide()
+        $('#slide-cont').hide()
+        $('#coverPage').hide()
 		$('#navPage').animate({width: 'toggle'},500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
 		$('#navBottom').animate({width: 'toggle'}, 500)
@@ -92,8 +92,8 @@ $(document).ready( f => {
 	$('#back2menu').click( f => {
 		mainNav.css({'margin-top':'none','top':'0'})
 		$('.page').hide()
-        // $('#slide-cont').delay(100).fadeIn(888)
-        // $('#coverPage').delay(100).fadeIn(888)
+        $('#slide-cont').delay(50).fadeIn()
+        $('#coverPage').delay(50).fadeIn()
 		$('#navPage').animate({width: 'toggle'}, 500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
         $('#navBottom').animate({width: 'toggle'}, 500)
