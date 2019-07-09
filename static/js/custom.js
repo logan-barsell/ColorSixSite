@@ -7,7 +7,7 @@ $(document).ready( f => {
 
     
 	var windowTop = $(window).scrollTop()
-	var coverPage = $('#coverPage').offset().top
+	
 	var navPage = $('#navPage').offset().top
 	var eventsPage = $('#events').offset().top
 	var musicPage = $('#music').offset().top
@@ -17,40 +17,40 @@ $(document).ready( f => {
 	var topNav = $('#navTop')
 	var bottomNav = $('#navBottom')
 	var mainNav = $('#mainNav')
-	bottomNav.hide()
+	// bottomNav.hide()
 
 
-    var toggle = false 
+    // var toggle = false 
 
-	$(window).scroll( f => {
+	// $(window).scroll( f => {
 
-		var coverPage = $('#coverPage').offset().top
-		var navPage = $('#navPage').offset().top
-		var windowTop = $(window).scrollTop()
-		var eventsPage = $('#events').offset().top
-		var musicPage = $('#music').offset().top
-		var videosPage = $('#videos').offset().top
-		var aboutusPage = $('#aboutus').offset().top
+	// 	var coverPage = $('#coverPage').offset().top
+	// 	var navPage = $('#navPage').offset().top
+	// 	var windowTop = $(window).scrollTop()
+	// 	var eventsPage = $('#events').offset().top
+	// 	var musicPage = $('#music').offset().top
+	// 	var videosPage = $('#videos').offset().top
+	// 	var aboutusPage = $('#aboutus').offset().top
 
-        console.log(windowTop)
+ //        console.log(windowTop)
 
  
 
-		if (windowTop > 413 && $('#coverPage').is(':visible') && toggle == false && toggle2 == false)  {
-            console.log(toggle)
-			topNav.slideUp('slow', 'swing')
-			bottomNav.slideDown('slow', 'swing')
-            toggle = true
-		}
+	// 	if (windowTop > 413 && $('#coverPage').is(':visible') && toggle == false && toggle2 == false)  {
+ //            console.log(toggle)
+	// 		topNav.slideUp('slow', 'swing')
+	// 		bottomNav.slideDown('slow', 'swing')
+ //            toggle = true
+	// 	}
 
-		if (windowTop < 413  && $('#coverPage').is(':visible') && toggle == true && toggle2 == false)  {
-            console.log(toggle) 
-			topNav.slideDown('slow', 'swing')
-			bottomNav.slideUp('slow', 'swing')
-            toggle = false
-		}
+	// 	if (windowTop < 413  && $('#coverPage').is(':visible') && toggle == true && toggle2 == false)  {
+ //            console.log(toggle) 
+	// 		topNav.slideDown('slow', 'swing')
+	// 		bottomNav.slideUp('slow', 'swing')
+ //            toggle = false
+	// 	}
 
-	})
+	// })
 
 	$('#mainNav').hide()
 	$('#events').hide()
@@ -59,19 +59,19 @@ $(document).ready( f => {
 	$('#aboutus').hide()
 
 
-    var toggle2 = false
+    // var toggle2 = false
 
 	$('#navPage li.collection-item').click( f => {
-        $('#slide-cont').hide()
-        $('#coverPage').hide()
+        // $('#slide-cont').hide()
+        // $('#coverPage').hide()
 		$('#navPage').animate({width: 'toggle'},500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
 		$('#navBottom').animate({width: 'toggle'}, 500)
-        toggle2 = true
+        // toggle2 = true
 
-        if ($('#navTop').is(':visible')) {
+        // if ($('#navTop').is(':visible')) {
             $('#navTop').animate({width: 'toggle'}, 500)
-        }
+        // }
 	})
 
 	$('#link2events').click( f => {
@@ -92,14 +92,15 @@ $(document).ready( f => {
 	$('#back2menu').click( f => {
 		mainNav.css({'margin-top':'none','top':'0'})
 		$('.page').hide()
-        $('#slide-cont').delay(100).fadeIn(888)
-        $('#coverPage').delay(100).fadeIn(888)
+        // $('#slide-cont').delay(100).fadeIn(888)
+        // $('#coverPage').delay(100).fadeIn(888)
 		$('#navPage').animate({width: 'toggle'}, 500)
 		$('#mainNav').animate({width: 'toggle'}, 500)
         $('#navBottom').animate({width: 'toggle'}, 500)
+        $('#navTop').animate({width: 'toggle'}, 500)
 		$('html, body').animate({scrollTop:$(document).height()}, 'fast')
-        toggle = false
-        toggle2 = false
+        // toggle = false
+        // toggle2 = false
 	})
 
 	var windoww = $(window).width()
