@@ -133,13 +133,13 @@ nav {
 
 
 #coverPage {
-	height: 50%;
+	height: 40%;
 	scroll-snap-align: start;
 }
 
 
 #slide-cont {
-  height: 200%;
+  height: 250%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
