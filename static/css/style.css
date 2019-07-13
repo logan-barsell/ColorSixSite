@@ -32,6 +32,28 @@ body, html {
 	box-shadow: 0px 0px 500px white;
 }
 
+@media only screen and (max-width: 427px) {
+
+	#navBottom {
+		height: 66px;
+		line-height: 27px;
+	}
+
+	#navBottom ul {
+		width: 100%;
+	}
+
+	#navBottom li {
+		width: 100%;
+		text-align: center;
+	}
+
+	#navBottom a {
+		font-size: 25px;
+	}
+}
+
+
 #navBottom a:hover {
 	opacity: .1;
 }
@@ -68,7 +90,7 @@ body, html {
 }
 
 #navPage .collection {
-	margin: auto;
+	margin: 1% auto 0px auto;
 	width: 333px;
 	text-align: center;
 }
@@ -95,31 +117,29 @@ nav ul a {
 	nav ul a {
 		font-size: 28px;
 	}
+	#navPage .collection {
+		font-size: 28px
+	}
 }
 
 @media only screen and (max-width: 650px) {
 	nav ul a {
 		font-size: 24px;
 	}
+
 }
 
 @media only screen and (max-width: 461px) {
-	nav ul a {
-		font-size: 21px;
-	}
 	#back2menu {
 		font-size: 24px;
 	}
+	nav ul a {
+		font-size: 21px;
+	}
+
 }
 
-@media only screen and (max-width: 427px) {
-	#navBottom {
-		height: 128px;
-	}
-	#navBottom ul {
-		width: 100%;
-	}
-}
+
 
 
 
@@ -158,20 +178,51 @@ nav {
 	background-position: center;
 	background-repeat: no-repeat;
 	position: fixed;
-	background-size: cover;
+	background-size: contain;
 	top: 0;
 	width: 100%;
+	border-top: solid black 27px;
 }
 
+@media only screen and (min-height: 900px) {
+	#navPage .collection {
+		width: 413px;
+		font-size: 44px;
+	}
 
+	#navPage .collection-item {
+		line-height: 2rem;
+	}
+	nav ul a {
+		font-size: 41px;
+	}
+
+	#navBottom {
+		height: 88px;
+		line-height: 88px;
+	}
+}
 
 
 @media (max-height: 666px) {
 	#navPage .collection {
-		margin-bottom: 159px;
+		margin-bottom: 1%;
+		width: 266px;
 	}
 }
 
+@media (max-height: 486px) {
+	#navPage .collection {
+		margin-bottom: 8%;
+		width: 188px;
+		font-size: 27px;
+	}
+
+	#navPage .collection-item {
+		line-height: 27px;
+
+	}
+}
 
 #navPage .collection .collection-item {
 	margin: 13px;
@@ -230,6 +281,7 @@ nav {
 	top: 0;
 	opacity: 1;
 	z-index: 103;
+	display: none;
 }
 
 #mainNav .brand-logo {

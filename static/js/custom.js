@@ -1,10 +1,8 @@
 $(document).ready( f => {
 
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 
 	$('.modal').modal()
-
-    
-
     
 	var windowTop = $(window).scrollTop()
 	
@@ -17,40 +15,14 @@ $(document).ready( f => {
 	var topNav = $('#navTop')
 	var bottomNav = $('#navBottom')
 	var mainNav = $('#mainNav')
+    mainNav.delay(50).show()
 	// bottomNav.hide()
 
 
     // var toggle = false 
 
-	// $(window).scroll( f => {
 
-	// 	var coverPage = $('#coverPage').offset().top
-	// 	var navPage = $('#navPage').offset().top
-	// 	var windowTop = $(window).scrollTop()
-	// 	var eventsPage = $('#events').offset().top
-	// 	var musicPage = $('#music').offset().top
-	// 	var videosPage = $('#videos').offset().top
-	// 	var aboutusPage = $('#aboutus').offset().top
 
- //        console.log(windowTop)
-
- 
-
-	// 	if (windowTop > 413 && $('#coverPage').is(':visible') && toggle == false && toggle2 == false)  {
- //            console.log(toggle)
-	// 		topNav.slideUp('slow', 'swing')
-	// 		bottomNav.slideDown('slow', 'swing')
- //            toggle = true
-	// 	}
-
-	// 	if (windowTop < 413  && $('#coverPage').is(':visible') && toggle == true && toggle2 == false)  {
- //            console.log(toggle) 
-	// 		topNav.slideDown('slow', 'swing')
-	// 		bottomNav.slideUp('slow', 'swing')
- //            toggle = false
-	// 	}
-
-	// })
 
 	$('#mainNav').hide()
 	$('#events').hide()
@@ -104,8 +76,31 @@ $(document).ready( f => {
 	})
 
 	var windoww = $(window).width()
+    var windowh = $(window).height()
 
 	function onResize(windoww) {
+        var windowh = $(window).height()
+        console.log(windowh)
+
+        // if (windoww < 400 || windowh < 600) {
+        //     $('#navPage').css('background-size', 'cover')
+        // } else {
+        //     $('#navPage').css('background-size', 'contain')
+        // }
+
+        if (windowh < 600 && windoww < 486) {
+            $('#navPage').css('background-size', 'cover')
+        } else {
+            $('#navPage').css('background-size', 'contain')
+        }
+
+        if (windoww < 400) {
+            $('#navPage').css('background-size', 'cover')
+        } else {
+            $('#navPage').css('background-size', 'contain')
+        }
+
+
 		if (windoww < 482) {
 			$('nav .brand-logo.center').removeClass('center')
 			$('nav .brand-logo').addClass('right')
@@ -138,6 +133,7 @@ $(document).ready( f => {
 	})
 
     var supportsAudio = !!document.createElement('audio').canPlayType
+    console.log(supportsAudio)
     if (supportsAudio) {
         // initialize plyr
         var player = new Plyr('#audio1', {
@@ -159,9 +155,24 @@ $(document).ready( f => {
             tracks = [{
                 "track": 1,
                 "name": "Dirty Little Secret",
-                "duration": "3:14",
+                "duration": "3:08",
                 "file": "dls"
-            }],
+            }, {
+                "track": 2,
+                "name": "Chasing Shadows",
+                "duration": "3:14",
+                "file": "cs"
+            }, {
+                "track": 3,
+                "name": "Rendezvous",
+                "duration": "3:25",
+                "file": "rdv"
+            }, {
+                "track": 4,
+                "name": "Kill The Lights",
+                "duration": "2:48",
+                "file": "ktl"
+            } ],
             buildPlaylist = $(tracks).each(function(key, value) {
                 var trackNumber = value.track,
                     trackName = value.name,
@@ -177,7 +188,6 @@ $(document).ready( f => {
                 </li>')
             }),
             trackCount = tracks.length,
-            npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').on('play', function () {
             	audio2.pause()
@@ -195,34 +205,10 @@ $(document).ready( f => {
                     loadTrack(index)
                 }
             }).get(0),
-            btnPrev = $('#btnPrev').on('click', function () {
-                if ((index - 1) > -1) {
-                    index--
-                    loadTrack(index)
-                    if (playing) {
-                        audio.play()
-                    }
-                } else {
-                    audio.pause()
-                    index = 0
-                    loadTrack(index)
-                }
-            }),
-            btnNext = $('#btnNext').on('click', function () {
-                if ((index + 1) < trackCount) {
-                    index++
-                    loadTrack(index)
-                    if (playing) {
-                        audio.play()
-                    }
-                } else {
-                    audio.pause()
-                    index = 0
-                    loadTrack(index)
-                }
-            }),
+
             li = $('#plList li').on('click', function () {
                 var id = parseInt($(this).index())
+                console.log(id)
                 if (id !== index) {
                     playTrack(id)
                 }
@@ -233,6 +219,7 @@ $(document).ready( f => {
                 npTitle.text(tracks[id].name)
                 index = id
                 audio.src = mediaPath + tracks[id].file + extension
+                console.log(mediaPath)
             },
             playTrack = function (id) {
                 loadTrack(id)
@@ -249,8 +236,10 @@ $(document).ready( f => {
 
 
 
-    var supportsAudio2 = !!document.createElement('audio2').canPlayType
-    if (supportsAudio) {
+
+    var supportsAudio2 = document.createElement('audio').canPlayType
+    console.log(supportsAudio2)
+    if (supportsAudio2) {
     var player2 = new Plyr('#audio3', {
             controls: [
                 'restart',
@@ -263,10 +252,10 @@ $(document).ready( f => {
             ]
         })
         // initialize playlist and controls
-        var index = 0,
-            playing = false,
-            mediaPath = '../static/css/audio/',
-            extension = '',
+        var index2 = 0,
+            playing2 = false,
+            mediaPath2 = '../static/css/audio/',
+            extension2 = '',
             tracks2 = [{
                 "track": 1,
                 "name": "Goodbye, Goodbye",
@@ -282,7 +271,8 @@ $(document).ready( f => {
                 "name": "The Bends",
                 "duration": "2:51",
                 "file": "bends"
-            }],
+            }
+            ],
             buildPlaylist2 = $(tracks2).each(function(key, value) {
                 var trackNumber2 = value.track,
                     trackName2 = value.name,
@@ -298,77 +288,48 @@ $(document).ready( f => {
                 </li>')
             }),
             trackCount2 = tracks2.length,
-            npAction2 = $('#npAction2'),
             npTitle2 = $('#npTitle2'),
             audio2 = $('#audio3').on('play', function () {
             	audio.pause()
-                playing = true
-                npAction2.text('Now Playing...')
+                playing2 = true
             }).on('pause', function () {
-                playing = false
-                npAction2.text('Paused...')
+                playing2 = false
             }).on('ended', function () {
-                npAction2.text('Paused...')
-                if ((index + 1) < trackCount2) {
-                    index++
-                    loadTrack(index)
+                if ((index2 + 1) < trackCount2) {
+                    index2++
+                    loadTrack(index2)
                     audio2.play()
                 } else {
                     audio2.pause()
-                    index = 0
-                    loadTrack(index)
+                    index2 = 0
+                    loadTrack(index2)
                 }
             }).get(0),
-            btnPrev = $('#btnPrev').on('click', function () {
-                if ((index - 1) > -1) {
-                    index--
-                    loadTrack(index)
-                    if (playing) {
-                        audio2.play()
-                    }
-                } else {
-                    audio2.pause()
-                    index = 0
-                    loadTrack(index)
-                }
-            }),
-            btnNext = $('#btnNext').on('click', function () {
-                if ((index + 1) < trackCount2) {
-                    index++
-                    loadTrack(index)
-                    if (playing) {
-                        audio2.play()
-                    }
-                } else {
-                    audio2.pause()
-                    index = 0
-                    loadTrack(index)
-                }
-            }),
-            li = $('#plList2 li').on('click', function () {
+            li2 = $('#plList2 li').on('click', function () {
+
                 var id = parseInt($(this).index())
-                if (id !== index) {
-                    playTrack(id)
+                if (id !== index2) {
+                    playTrack2(id)
                 }
             }),
-            loadTrack = function (id) {
+            loadTrack2 = function (id) {
                 $('.plSel2').removeClass('plSel2')
                 $('#plList2 li:eq(' + id + ')').addClass('plSel2')
                 npTitle2.text(tracks2[id].name)
-                index = id
-                audio2.src = mediaPath + tracks2[id].file + extension
+                index2 = id
+                audio2.src = mediaPath2 + tracks2[id].file + extension2
             },
-            playTrack = function (id) {
-                loadTrack(id)
+            playTrack2 = function (id) {
+                loadTrack2(id)
                 audio2.play()
             }
-        extension = audio2.canPlayType('audio/mpeg') ? '.mp3' : audio2.canPlayType('audio/ogg') ? '.ogg' : ''
-        loadTrack(index)
+        extension2 = audio2.canPlayType('audio/mpeg') ? '.mp3' : audio2.canPlayType('audio/ogg') ? '.ogg' : ''
+        loadTrack2(index2)
     } else {
         // boo hoo
         $('.column').addClass('hidden')
-        var noSupport = $('#audio3').text()
-        $('.container').append('<p class="no-support">' + noSupport + '</p>')
+        var noSupport2 = $('#audio3').text()
+        $('.container').append('<p class="no-support">' + noSupport2 + '</p>')
     }
 
 })
