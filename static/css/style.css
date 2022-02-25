@@ -1,162 +1,149 @@
-body, html {
-	height: 100%;
-	background-color: #181818;
-/*	border: 5px solid black;*/
-	font-family: Bodoni;
-	font-variant: small-caps;
-	font-size: 31px;
-
+body,
+html {
+  height: 100%;
+  background-color: #181818;
+  /*	border: 5px solid black;*/
+  font-family: Bodoni;
+  font-variant: small-caps;
+  font-size: 31px;
 }
 
 #navTop {
-	position: absolute;
-	z-index: 102;
-	top: 0;
-	box-shadow: 0px 0px 500px #3e1b47;
-	height: 100px;
+  position: absolute;
+  z-index: 102;
+  top: 0;
+  box-shadow: 0px 0px 500px #3e1b47;
+  height: 100px;
 }
 
 #navTop img {
-	height: 100px;
+  height: 100px;
 }
 
 #navTop img:hover {
-	opacity: .2;
+  opacity: 0.2;
 }
 
-
 #navBottom {
-	position: fixed;
-	z-index: 100;
-	bottom: 0;
-	box-shadow: 0px 0px 500px white;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  box-shadow: 0px 0px 500px white;
 }
 
 @media only screen and (max-width: 427px) {
+  #navBottom {
+    height: 66px;
+    line-height: 27px;
+  }
 
-	#navBottom {
-		height: 66px;
-		line-height: 27px;
-	}
+  #navBottom ul {
+    width: 100%;
+  }
 
-	#navBottom ul {
-		width: 100%;
-	}
+  #navBottom li {
+    width: 100%;
+    text-align: center;
+  }
 
-	#navBottom li {
-		width: 100%;
-		text-align: center;
-	}
-
-	#navBottom a {
-		font-size: 25px;
-	}
+  #navBottom a {
+    font-size: 25px;
+  }
 }
 
-
 #navBottom a:hover {
-	opacity: .1;
+  opacity: 0.1;
 }
 
 @media only screen and (max-width: 503px) {
-  #coverPage img{
+  #coverPage img {
     box-shadow: none;
     border-top: none;
     border-bottom: none;
   }
-  body, html {
-  	background-color: black;
+  body,
+  html {
+    background-color: black;
   }
 }
 
 #coverPage {
-	max-width: 100%;
-	background-color: #181818;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: auto;
-	border-bottom: 27px solid black;
-	position: relative;
-	z-index: 101;
-
+  max-width: 100%;
+  background-color: #181818;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  border-bottom: 27px solid black;
+  position: relative;
+  z-index: 101;
 }
 
 #coverPage img {
-	max-width: 100%;
-	border: 7px solid black;
-	box-shadow: 0px 0px 500px #3e1b47;
-	height: 100%;
+  max-width: 100%;
+  border: 7px solid black;
+  box-shadow: 0px 0px 500px #3e1b47;
+  height: 100%;
 }
 
 #navPage .collection {
-	margin: 1% auto 0px auto;
-	width: 333px;
-	text-align: center;
+  margin: 1% auto 0px auto;
+  width: 333px;
+  text-align: center;
 }
 
-
 @media (max-height: 1000px) {
-/*	#coverPage img {
+  /*	#coverPage img {
 		max-width: 500px;
 	}*/
-	#navTop {
-		height: 64px
-	}
-	#navTop img {
-		height: 64px;
-	}
+  #navTop {
+    height: 64px;
+  }
+  #navTop img {
+    height: 64px;
+  }
 }
 
 nav ul a {
-	font-size: 31px;
-	display: inline-block;
+  font-size: 31px;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 750px) {
-	nav ul a {
-		font-size: 28px;
-	}
-	#navPage .collection {
-		font-size: 28px
-	}
+  nav ul a {
+    font-size: 28px;
+  }
+  #navPage .collection {
+    font-size: 28px;
+  }
 }
 
 @media only screen and (max-width: 650px) {
-	nav ul a {
-		font-size: 24px;
-	}
-
+  nav ul a {
+    font-size: 24px;
+  }
 }
 
 @media only screen and (max-width: 461px) {
-	#back2menu {
-		font-size: 24px;
-	}
-	nav ul a {
-		font-size: 21px;
-	}
-
+  #back2menu {
+    font-size: 24px;
+  }
+  nav ul a {
+    font-size: 21px;
+  }
 }
-
-
-
-
-
 
 nav {
-	background-color: black;
-	box-shadow: 0px 0px 500px white;
-	opacity: .9;
-	overflow: hidden;
+  background-color: black;
+  box-shadow: 0px 0px 500px white;
+  opacity: 0.9;
+  overflow: hidden;
 }
-
 
 #coverPage {
-	height: 40%;
-	scroll-snap-align: start;
+  height: 40%;
+  scroll-snap-align: start;
 }
-
 
 #slide-cont {
   height: 250%;
@@ -165,88 +152,82 @@ nav {
 }
 
 #slide-cont .section {
-	scroll-snap-align: start;
+  scroll-snap-align: start;
 }
 
-
-
-
 #navPage {
-	height: 100%;
-	background-color: #181818;
-	background-image: url("images/color6_3.JPG");
-	background-position: center;
-	background-repeat: no-repeat;
-	position: fixed;
-	background-size: contain;
-	top: 0;
-	width: 100%;
-	border-top: solid black 27px;
+  height: 100%;
+  background-color: #181818;
+  background-image: url('images/color6_3.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  background-size: contain;
+  top: 0;
+  width: 100%;
+  border-top: solid black 27px;
 }
 
 @media only screen and (min-height: 900px) {
-	#navPage .collection {
-		width: 413px;
-		font-size: 44px;
-	}
+  #navPage .collection {
+    width: 413px;
+    font-size: 44px;
+  }
 
-	#navPage .collection-item {
-		line-height: 2rem;
-	}
-	nav ul a {
-		font-size: 41px;
-	}
+  #navPage .collection-item {
+    line-height: 2rem;
+  }
+  nav ul a {
+    font-size: 41px;
+  }
 
-	#navBottom {
-		height: 88px;
-		line-height: 88px;
-	}
+  #navBottom {
+    height: 88px;
+    line-height: 88px;
+  }
 }
 
-
 @media (max-height: 666px) {
-	#navPage .collection {
-		margin-bottom: 1%;
-		width: 266px;
-	}
+  #navPage .collection {
+    margin-bottom: 1%;
+    width: 266px;
+  }
 }
 
 @media (max-height: 486px) {
-	#navPage .collection {
-		margin-bottom: 8%;
-		width: 188px;
-		font-size: 27px;
-	}
+  #navPage .collection {
+    margin-bottom: 8%;
+    width: 188px;
+    font-size: 27px;
+  }
 
-	#navPage .collection-item {
-		line-height: 27px;
-
-	}
+  #navPage .collection-item {
+    line-height: 27px;
+  }
 }
 
-#navPage .collection .collection-item {
-	margin: 13px;
-	cursor: pointer; 
-	opacity: .7;
+#navPage .collection li.collection-item {
+  margin: 13px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 100ms;
 }
 
 #navPage .collection:hover {
-	text-shadow: 0 0 5px rgba(0,0,0,0.5);
-	color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: transparent;
 }
 
-
 #navPage .collection li.collection-item:hover {
-	opacity: .9;
-	color: black;
-	text-shadow: none;
+  opacity: 0.9;
+  color: black;
+  text-shadow: none;
 }
 
 .gradient-border:hover {
   --borderWidth: 3px;
-  background: #1D1F20;
+  background: #1d1f20;
   position: relative;
-
 }
 .gradient-border:after {
   content: '';
@@ -255,236 +236,237 @@ nav {
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
 
   z-index: -1;
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
 }
 
-
 @keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #mainNav {
-	height: 96.33px;
-	position: fixed;
-	top: 0;
-	opacity: 1;
-	z-index: 103;
-	display: none;
+  height: 96.33px;
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  z-index: 103;
+  display: none;
 }
 
 #mainNav .brand-logo {
-	position: absolute;
-	z-index: 100;
+  position: absolute;
+  z-index: 100;
 }
 
 #mainNav .brand-logo img {
-	max-width: 227px;
-	height: 96px;
+  max-width: 227px;
+  height: 96px;
 }
 
 #mainNav li a {
-	margin: 30px;
+  margin: 30px;
 }
 
 #mainNav .btn {
-	background-color: white;
-	opacity: .7;
+  background-color: white;
+  opacity: 0.7;
 }
 
 #mainNav .btn:hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 .waves-effect img {
-	z-index: 1;
+  z-index: 1;
 }
 
 #songkick-cont {
-	padding-top: 127px;
+  padding-top: 127px;
 }
 
 #videos .row {
-	padding-top: 127px;
-	margin-bottom: 0px;
+  padding-top: 127px;
+  margin-bottom: 0px;
 }
 
 #videos .col {
-	margin-bottom: 46px;
+  margin-bottom: 46px;
 }
 
 #aboutus .img-container {
-	max-width: 444px;
-	margin: auto;
+  max-width: 444px;
+  margin: auto;
 }
 
 #aboutus #logo {
-	margin-top: 133px;
-	width: 100%;
-	border: 1px solid black;
+  margin-top: 133px;
+  width: 100%;
+  border: 1px solid black;
 }
 #aboutus span {
-	text-shadow: 1px 1px #ab772b;
-	font-weight: bolder;
-	font-size: 35px;
+  text-shadow: 1px 1px #ab772b;
+  font-weight: bolder;
+  font-size: 35px;
 }
 
 #aboutus span span {
-	color: #ae1b2a;
+  color: #ae1b2a;
 }
 
 #aboutus p {
-	font-size: 31px;
-	color: white;
+  font-size: 31px;
+  color: white;
 }
 
 #aboutus a {
-	color: white;
-	text-shadow: 1px 1px 0px #ae1b2a;
-	font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 0px #ae1b2a;
+  font-weight: bold;
 }
 
-
 #aboutus .col {
-	padding: 0px;
-	line-height: 0px;
-
+  padding: 0px;
+  line-height: 0px;
 }
 
 #aboutus .row {
-	margin-top: 55px;
-	margin-bottom: 0px;
+  margin-top: 55px;
+  margin-bottom: 0px;
 }
 
 #aboutus .col img {
-	width: 100%
+  width: 100%;
 }
-
 
 /* Global Styles
 ================================================== */
 
-
 /* Setup
 ================================================== */
 
-#music .container { 
-	position:relative;
-	padding-top:49px;
-	max-width:800px;
-	width:100%; 
+#music .container {
+  position: relative;
+  padding-top: 49px;
+  max-width: 800px;
+  width: 100%;
 }
 
 #music .column {
-	margin-top: 70px;
+  margin-top: 70px;
 }
 
 #music h6 {
-	text-align: center;
-	text-shadow: 2px 2px black;
-	color: white;
-	margin-top: 0px;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  color: white;
+  margin-top: 0px;
 }
 
 #music h6 span {
-	font-size: 27px;
+  font-size: 27px;
 }
 
 #music .img-container {
-	max-width: 444px;
-	margin: auto;
+  max-width: 444px;
+  margin: auto;
 }
 
 #music .img-container img {
-	width: 100%;
+  width: 100%;
 }
 
-
-#music .column { 
-	width:inherit;
+#music .column {
+  width: inherit;
 }
-
 
 /* Misc.
 ================================================== */
 
 .no-support {
-margin:2rem auto;
-text-align:center;
-width:90%;
+  margin: 2rem auto;
+  text-align: center;
+  width: 90%;
 }
-
 
 /* Audio Player Styles
 ================================================== */
 
-
-
-#mainwrap, #mainwrap2 {
-	margin: 0px 6px;
+#mainwrap,
+#mainwrap2 {
+  margin: 0px 6px;
 }
 
-
-#plList li, #plList2 li {
-cursor:pointer;
-display:block;
-margin:0;
-padding:21px 0;
+#plList li,
+#plList2 li {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 21px 0;
 }
 
-#plList li:hover, #plList2 li:hover {
-background-color:black;
-opacity: .4;
+#plList li:hover,
+#plList2 li:hover {
+  background-color: black;
+  opacity: 0.4;
 }
 
 .plItem {
-position:relative;
+  position: relative;
 }
 
 .plTitle {
-color: white;
-padding-left: 13px;
+  color: white;
+  padding-left: 13px;
 }
 
-
 .plLength {
-padding-left:21px;
-position:absolute;
-right:21px;
-top:0;
-color: white;
+  padding-left: 21px;
+  position: absolute;
+  right: 21px;
+  top: 0;
+  color: white;
 }
 
 @media only screen and (max-width: 413px) {
-	.plLength {
-		display: none;
-	}
-	.plTitle {
-		padding-left: 0px;
-	}
-	.plItem {
-		text-align: center;
-	}
+  .plLength {
+    display: none;
+  }
+  .plTitle {
+    padding-left: 0px;
+  }
+  .plItem {
+    text-align: center;
+  }
 }
 
-
-
 .plSel,
-.plSel:hover, .plSel2, .plSel2:hover {
-background-color:black;
-color: black;
-opacity: .7;
+.plSel:hover,
+.plSel2,
+.plSel2:hover {
+  background-color: black;
+  color: black;
+  opacity: 0.7;
 }
 
 /* Plyr Overrides
@@ -493,25 +475,23 @@ opacity: .7;
 .plyr--audio .plyr__controls button.tab-focus:focus,
 .plyr--audio .plyr__controls button:hover,
 .plyr__play-large {
-background: black;
+  background: black;
 }
 
-.plyr--full-ui input[type=range] {
-	color: red;
+.plyr--full-ui input[type='range'] {
+  color: red;
 }
 
-#nowPlay, #nowPlay2 {
-	margin-bottom: 7px;
-	color: white;
-	text-shadow: 2px 2px 0px black;
+#nowPlay,
+#nowPlay2 {
+  margin-bottom: 7px;
+  color: white;
+  text-shadow: 2px 2px 0px black;
 }
 
 #music button {
-	background: black;
+  background: black;
 }
 
 /* Media Queries
 ================================================== */
-
-
-
