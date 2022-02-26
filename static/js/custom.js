@@ -1,4 +1,33 @@
+    // LOADING JS 
+
+
+    const wait = ( delay = 0) => new Promise(resolve => setTimeout(resolve, delay))
+
+    const setVisible = (elementOrSelector, visible) => 
+        (typeof elementOrSelector === 'string'
+            ? document.querySelector(elementOrSelector) 
+            : elementOrSelector
+        ).style.display = visible ? 'block' : 'none'
+
+    setVisible('.page', false)
+    setVisible('#loading', true)
+    console.log("hello")
+
+    document.addEventListener('DOMContentLoaded', () => 
+        wait(1000).then(() => {
+            console.log("hello")
+            setVisible('.page', true)
+            setVisible('#loading', false)
+        })
+    )
+
+
 $(document).ready( f => {
+
+
+
+
+    
 
     window.scrollTo({ top: 0, behavior: 'smooth' })
 
@@ -80,7 +109,6 @@ $(document).ready( f => {
 
 	function onResize(windoww) {
         var windowh = $(window).height()
-        console.log(windowh)
 
         // if (windoww < 400 || windowh < 600) {
         //     $('#navPage').css('background-size', 'cover')
@@ -132,8 +160,10 @@ $(document).ready( f => {
 
 	})
 
+
+    // AUDIO PLAYER JS
+
     var supportsAudio = !!document.createElement('audio').canPlayType
-    console.log(supportsAudio)
     if (supportsAudio) {
         // initialize plyr
         var player = new Plyr('#audio1', {
@@ -219,7 +249,6 @@ $(document).ready( f => {
                 npTitle.text(tracks[id].name)
                 index = id
                 audio.src = mediaPath + tracks[id].file + extension
-                console.log(mediaPath)
             },
             playTrack = function (id) {
                 loadTrack(id)
@@ -238,7 +267,6 @@ $(document).ready( f => {
 
 
     var supportsAudio2 = document.createElement('audio').canPlayType
-    console.log(supportsAudio2)
     if (supportsAudio2) {
     var player2 = new Plyr('#audio3', {
             controls: [
@@ -332,5 +360,21 @@ $(document).ready( f => {
         $('.container').append('<p class="no-support">' + noSupport2 + '</p>')
     }
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
+
+
 
