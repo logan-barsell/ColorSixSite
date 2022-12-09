@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "amplitudejs": "^4.1.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-session": "^1.16.1",
     "pg": "^7.10.0"
   },
